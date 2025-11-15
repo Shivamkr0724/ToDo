@@ -116,7 +116,7 @@ router.post("/forgot", async (req: Request, res: Response) => {
     await user.save();
 
     // Frontend reset password URL
-    const resetURL = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
+    const resetURL = `${process.env.CLIENT_URL}/reset-password/${resetToken}`; //http://localhost
 
     // Send email using Resend
     const emailResponse = await resend.emails.send({
