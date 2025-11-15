@@ -1,4 +1,15 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }
+
 {
+  "compilerOptions": {
+    "types": ["react", "react/jsx-runtime", "vite/client"]
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
