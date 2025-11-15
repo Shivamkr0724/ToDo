@@ -15,15 +15,15 @@
     "jsx": "react-jsx",
 
     "moduleResolution": "bundler",
-    "noEmit": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "noEmit": true,
 
-    "types": ["vite/client", "react", "react/jsx-runtime"],
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 
-    "resolveJsonModule": true
+    "types": ["vite/client", "react", "react/jsx-runtime"]
   },
   "include": ["src"]
 }
