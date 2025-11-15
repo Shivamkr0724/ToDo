@@ -15,7 +15,9 @@
 
     /* IMPORTANT FIXES */
     "verbatimModuleSyntax": false,
+    "noEmit": true,
     "jsx": "react-jsx",
+
 
     /* Linting */
     "strict": true,
