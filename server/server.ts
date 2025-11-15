@@ -22,7 +22,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://full-stack-todo-app-ten-omega.vercel.app"
+      "https://to-do-pi-fawn.vercel.app"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
