@@ -8,7 +8,7 @@ export default function ForgotPassword() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8000/auth/forgot", {
+    const res = await fetch("https://todo-vz4h.onrender.com/auth/forgot", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),

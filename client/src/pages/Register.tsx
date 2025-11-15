@@ -19,7 +19,7 @@ export default function Register(): JSX.Element {
 
     try {
       const res = await fetch(
-        "http://localhost:8000/auth/register",
+        "https://todo-vz4h.onrender.com/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

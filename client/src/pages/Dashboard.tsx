@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import NoTaskImage from "../assets/empty.png";
-import AddTaskModal from "../components/AddTaskModal.tsx";
+import AddTaskModal from "../components/AddTaskModal";
 
 // ---------------- TYPES ----------------
 interface Task {
@@ -74,7 +74,7 @@ export default function Dashboard(): JSX.Element {
     async function fetchTodos() {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:8000/todo", {
+        const res = await fetch("https://todo-vz4h.onrender.com/todo", {    
           headers: { Authorization: "Bearer " + localStorage.getItem("token") },
         });
 
@@ -105,7 +105,7 @@ export default function Dashboard(): JSX.Element {
   // ADD NEW TODO
   async function addNewTodo(text: string) {
     try {
-      const res = await fetch("http://localhost:8000/todo", {
+      const res = await fetch("https://todo-vz4h.onrender.com/todo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -125,7 +125,7 @@ export default function Dashboard(): JSX.Element {
   // TOGGLE DONE
   async function toggleDone(id: string, done: boolean) {
     try {
-      await fetch(`http://localhost:8000/todo/${id}`, {
+      await fetch(`https://todo-vz4h.onrender.com/todo/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -143,7 +143,7 @@ export default function Dashboard(): JSX.Element {
   // DELETE TASK
   async function deleteTask(id: string) {
     try {
-      await fetch(`http://localhost:8000/todo/${id}`, {
+      await fetch(`https://todo-vz4h.onrender.com/todo/${id}`, {
         method: "DELETE",
         headers: { Authorization: "Bearer " + localStorage.getItem("token") },
       });
@@ -157,7 +157,7 @@ export default function Dashboard(): JSX.Element {
   // EDIT TASK
   async function updateTodo(id: string, newText: string) {
     try {
-      const res = await fetch(`http://localhost:8000/todo/${id}`, {
+      const res = await fetch(`https://todo-vz4h.onrender.com/todo/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

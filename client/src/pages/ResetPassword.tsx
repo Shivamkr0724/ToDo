@@ -20,7 +20,7 @@ export default function ResetPassword() {
       return;
     }
 
-    const res = await fetch(`http://localhost:8000/auth/reset/${token}`, {
+    const res = await fetch(`https://todo-vz4h.onrender.com/auth/reset/${token}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password }),
