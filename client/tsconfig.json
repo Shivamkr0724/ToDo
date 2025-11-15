@@ -6,16 +6,24 @@
 //   ]
 // }
 
+
 {
   "compilerOptions": {
-    "types": ["react", "react/jsx-runtime", "vite/client"],
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
-    "skipLibCheck": true
-  },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
-}
 
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
+
+    "types": ["vite/client", "react", "react/jsx-runtime"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
+}
